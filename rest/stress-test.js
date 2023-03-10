@@ -2,12 +2,12 @@ import http from "k6/http";
 import { check } from "k6";
 
 // Use environment variables
-let maxVUs = parseInt(__ENV.MAX_VUS) || 50;
-let baseUrl = __ENV.BASE_URL || "https://azweb-cdp-content-v3-we-dev.azurewebsites.net";
-let endpoint = __ENV.ENDPOINT || "/content/type";
+let baseUrl = __ENV.BASE_URR;
+let endpoint = __ENV.ENDPOINT;
 let httpMethod = __ENV.HTTP_METHOD || "GET";
-let tenantId = __ENV.TENANT_ID || "298f68ee-fc48-49da-bae7-74d666e981e4"; // TODO: Which project should be our default tenant?
+let headers = __ENV.HEADERS || "{ 'Accept': '*/*'}";
 
+let maxVUs = parseInt(__ENV.MAX_VUS) || 50;
 let startRate = parseInt(__ENV.START_RATE) || 1;
 let rpsTarget = parseInt(__ENV.RPS_TARGET) || 1000;
 let rpsRampUpRate = parseInt(__ENV.RPS_RAMP_UP_RATE) || 1;
@@ -64,9 +64,7 @@ export default function () {
   // We set up the request
   let url = baseUrl + endpoint;
   let params = {
-    headers: {
-      'TenantId': tenantId
-    }
+    headers
   }
 
   // We determine the request type, and we make the request
