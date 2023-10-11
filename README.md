@@ -4,24 +4,10 @@
 ```
 .
 ├── .github
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   ├── dependabot.yaml
-│   ├── release-drafter.yml
-│   ├── renovate.json
 │   └── workflows
-│       ├── auto-merge.yaml
-│       ├── fork-sync.yaml
-│       ├── github-readme-tree.yaml
-│       ├── release-drafter.yaml
-│       ├── require-labels.yaml
-│       ├── sync-labels.yaml
-│       └── todos-to-issues.yaml
-├── README.md
-├── rest
-│   └── stress-test.js
-└── tree.bak
+└── rest
 
-3 directories, 14 files
+3 directories
 ```
 <!-- readme-tree end -->
 
