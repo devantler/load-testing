@@ -1,4 +1,5 @@
 # load-testing
+
 <!-- readme-tree start -->
 ```
 .
@@ -23,3 +24,5 @@
 3 directories, 14 files
 ```
 <!-- readme-tree end -->
+
+A repo with templated K6 load tests, to easily test performance of APIs.
